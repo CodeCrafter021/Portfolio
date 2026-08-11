@@ -677,3 +677,122 @@ main {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   MOBILE RESPONSIVE FIXES
+============================================================ */
+@media (max-width: 768px) {
+
+  /* Section spacing kam karo */
+  section {
+    min-height: auto !important;
+    padding: 70px 5% !important;
+  }
+
+  /* Hero fix */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* About grid fix */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Contact grid fix */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Stats grid fix */
+  .about-stats {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Skills grid fix */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Projects grid fix */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Certs grid fix */
+  .certs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Hero title size */
+  .hero-title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+  }
+
+  /* Section title size */
+  h2.s-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* Nav font size */
+  .nav-link {
+    font-size: .68rem !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Term card */
+  .term-card {
+    width: 100% !important;
+  }
+
+  /* Resume card */
+  .resume-card {
+    padding: 32px 20px !important;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 22px !important;
+  }
+
+  /* Hero CTA buttons */
+  .hero-cta {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .btn-p, .btn-s {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  section {
+    padding: 60px 4% !important;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr !important;
+  }
+}
