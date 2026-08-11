@@ -83,7 +83,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT SIDE — Terminal Card */}
+        /* RIGHT SIDE — Terminal Card */
         <div className="term-card reveal d2" id="term-card">
           <div className="term-bar">
             <span className="term-dot"></span>
@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
             <div className="val">
               {typed}
-              <span className="term-cursor"></span>
+              <span className="term-cursor">Learning</span>
             </div>
           </div>
         </div>
