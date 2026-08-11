@@ -26,7 +26,7 @@ const certs = [
     issuer: "LinkedIn Learning",
     year: "2026",
     desc: "Relational Database Design – schema creation, normalization, ER modeling, ACID properties, and data integrity.",
-    image: "C:\Users\aksai\Desktop\Pro\Web Deb\Project\Portfolio\public\cert-database.jpg",
+    image: "C:\Users\aksai\Desktop\Pro\Web Deb\Project\Portfolio\public\cert-relationdatabase.jpg",
   }
 ];
 
