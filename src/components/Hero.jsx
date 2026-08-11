@@ -26,7 +26,7 @@ export default function Hero() {
 
   // Terminal typing animation
   useEffect(() => {
-    const fullText = "open_to_work: true";
+    const fullText = "open_to_work: Learning";
     let i = 0;
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
             <div className="val">
               {typed}
-              <span className="term-cursor">Learning</span>
+              <span className="term-cursor"></span>
             </div>
           </div>
         </div>
