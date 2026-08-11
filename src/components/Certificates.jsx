@@ -8,7 +8,7 @@ const certs = [
     issuer: "LinkedIn Learning",
     year: "2026",
     desc: "SQL for Data Engineering — advanced queries, optimisation, joins, window functions, and pipeline architecture.",
-    image: "C:\Users\aksai\Desktop\Pro\Web Deb\Project\Portfolio\public\cert-sql.jpg",
+    image: "Project\Portfolio\public\cert-sql.jpg",
   },
   {
     id: 2,
@@ -17,16 +17,16 @@ const certs = [
     issuer: "SkillLevel",
     year: "2026",
     desc: "Comprehensive Python development — fundamentals, OOP, data structures, libraries, and application patterns.",
-    image: "C:\Users\aksai\Desktop\Pro\Web Deb\Project\Portfolio\public\cert-PythonOrAi.jpg",
+    image: "Project\Portfolio\public\cert-PythonOrAi.jpg",
   },
   {
     id: 3,
     icon: "📊",
-    title: "certified relation databse",
+    title: "certified relation database",
     issuer: "LinkedIn Learning",
     year: "2026",
     desc: "Relational Database Design – schema creation, normalization, ER modeling, ACID properties, and data integrity.",
-    image: "C:\Users\aksai\Desktop\Pro\Web Deb\Project\Portfolio\public\cert-relationdatabase.jpg",
+    image: "Project\Portfolio\public\cert-relationdatabase.jpg",
   }
 ];
 
