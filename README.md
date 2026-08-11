@@ -1,16 +1,31 @@
-# React + Vite
+# Amitkumar Saini — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+🚀 **Live Site:** [codecrafter021.github.io/Portfolio](https://codecrafter021.github.io/Portfolio/)
 
-Currently, two official plugins are available:
+A personal portfolio website built with **React + Vite**, showcasing my skills, projects, and experience as a Full-Stack Developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Built With
 
-## React Compiler
+- **React** — Component-based UI
+- **Vite** — Fast build tool
+- **Node.js & Python** — Core tech stack
+- **EmailJS** — Contact form email integration
+- **GitHub Pages** — Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+- Responsive dark-themed design
+- Animated hero section with terminal card
+- Scroll reveal animations
+- Working contact form (emails directly to inbox)
+- Skills, Projects, Certificates, and Resume sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📬 Contact
+
+- **GitHub:** [CodeCrafter021](https://github.com/CodeCrafter021)
+- **LinkedIn:** [Saini Amitkumar](https://linkedin.com/in/saini-amitkumar-8a3479380)
+- **Email:** sainiamitkumar285@gmail.com
+
+---
+
+© 2026 Saini Amitkumar · All rights reserved.
