@@ -6,7 +6,7 @@ export default function Resume() {
       <div className="resume-wrap">
         <div className="resume-card reveal d2">
           <span className="resume-icon">📄</span>
-          <h3>Saini Amitkumar Sriram</h3>
+          <h3>Saini Amitkumar Shriram</h3>
           <p>Full-Stack Developer · Node.js & React · Python<br />
             BCA Student · Actively seeking internship opportunities.
           </p>
