@@ -161,7 +161,7 @@ nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
 ============================================================ */
 main{position:relative;z-index:2;}
 section{
-  min-height:100vh;padding:120px 6%;
+  min-height:auto;padding:120px 6%;
   display:flex;flex-direction:column;justify-content:center;
   position:relative;border-bottom:1px solid var(--border);
   overflow:hidden;
