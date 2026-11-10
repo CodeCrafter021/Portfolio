@@ -4,7 +4,7 @@ const certificates = [
   {
     title: 'Certified SQL Writer',
     issuer: 'LinkedIn Learning · 2026',
-    description: 'SQL for Data Engineering — advanced queries, optimisation, joins, and window functions.',
+    description: 'SQL for Data Engineering — advanced queries, optimization, joins, and window functions.',
     image: '/certificates/cert-sql.jpg',
   },
   {
