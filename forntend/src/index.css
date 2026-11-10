@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+  --mono: 'DM Mono', monospace;
+  --page: #f7f6f2;
+  --surface: #fff;
+  --surface-soft: #f5f4f0;
+  --text: #1d1d1b;
+  --muted: #77766f;
+  --placeholder: #a7a69f;
+  --border: #e8e6df;
+  --nav-border: rgb(255 255 255 / 13%);
+  --accent: #7956cf;
+  --accent-soft: rgb(121 86 207 / 10%);
+  --accent-border: rgb(121 86 207 / 35%);
+  --toggle-bg: #f0efea;
+  --toggle-thumb: #fff;
+  --dot-color: rgb(49 47 39 / 11%);
+  --hero-glow: radial-gradient(circle, rgb(192 173 255 / 45%), rgb(245 231 204 / 18%) 64%, transparent 76%);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #121311;
+  --surface: #1b1c19;
+  --surface-soft: #22231f;
+  --text: #f3f1ea;
+  --muted: #aaa99f;
+  --placeholder: #797a72;
+  --border: #30312c;
+  --nav-border: rgb(255 255 255 / 13%);
+  --accent: #b7a0ff;
+  --accent-soft: rgb(183 160 255 / 12%);
+  --accent-border: rgb(183 160 255 / 40%);
+  --toggle-bg: #292a26;
+  --toggle-thumb: #f4f2eb;
+  --dot-color: rgb(255 255 255 / 10%);
+  --hero-glow: radial-gradient(circle, rgb(89 63 157 / 35%), rgb(64 58 45 / 16%) 64%, transparent 76%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--text);
+  background: var(--page);
+  transition: color 260ms ease, background-color 260ms ease;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: #7956cf;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
