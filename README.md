@@ -52,7 +52,7 @@ Open the local URL printed by Vite in your terminal.
 
 ### Configure the contact form
 
-The contact form includes the project's EmailJS service ID, template ID, and public key as frontend defaults, so it works in static deployments without server-side environment configuration. You can override them locally by copying `forntend/.env.example` to `forntend/.env.local`. In your EmailJS template, use the form field names `name`, `email`, `subject`, and `message`. Restart the Vite development server after editing environment values.
+The contact form includes the project's EmailJS service ID, template ID, and public key as frontend defaults, so static deployments work without separate environment configuration. Vite does not load `.env.example`; to override the defaults locally, copy it to `forntend/.env.local` and restart the development server. In your EmailJS template, use the form field names `name`, `email`, `subject`, and `message`.
 
 ## Available scripts
 

@@ -3,9 +3,9 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const emailAddress = 'sainiamitkumar285@gmail.com';
-const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_8w64yte';
+const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_cop9p18';
+const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '4l1vk3YCWsv8igHN4';
 
 const Contact = () => {
   const formRef = useRef();
@@ -31,7 +31,12 @@ const Contact = () => {
       formRef.current.reset();
     } catch (error) {
       console.error('EmailJS failed to send the message:', error);
-      setStatus('Failed to send message. Please try again or email me directly.');
+      const errorText = typeof error?.text === 'string' ? error.text : '';
+      setStatus(
+        errorText
+          ? `Failed to send message: ${errorText}`
+          : 'Failed to send message. Please try again or email me directly.',
+      );
     } finally {
       setLoading(false);
     }
