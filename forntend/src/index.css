@@ -24,6 +24,7 @@
   --toggle-bg: #f0efea;
   --toggle-thumb: #fff;
   --dot-color: rgb(49 47 39 / 11%);
+  --cursor-glow: rgb(121 86 207 / 10%);
   --hero-glow: radial-gradient(circle, rgb(192 173 255 / 45%), rgb(245 231 204 / 18%) 64%, transparent 76%);
 }
 
@@ -43,6 +44,7 @@
   --toggle-bg: #292a26;
   --toggle-thumb: #f4f2eb;
   --dot-color: rgb(255 255 255 / 10%);
+  --cursor-glow: rgb(183 160 255 / 13%);
   --hero-glow: radial-gradient(circle, rgb(89 63 157 / 35%), rgb(64 58 45 / 16%) 64%, transparent 76%);
 }
 
@@ -62,6 +64,27 @@ body {
   color: var(--text);
   background: var(--page);
   transition: color 260ms ease, background-color 260ms ease;
+}
+
+body::before {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background: radial-gradient(
+    280px circle at var(--pointer-x, -300px) var(--pointer-y, -300px),
+    var(--cursor-glow),
+    transparent 78%
+  );
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.has-cursor-glow::before {
+    opacity: 1;
+  }
 }
 
 body,

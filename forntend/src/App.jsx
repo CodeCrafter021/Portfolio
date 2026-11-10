@@ -25,6 +25,41 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
+    let animationFrame;
+
+    const handlePointerMove = (event) => {
+      if (event.pointerType !== 'mouse') return;
+
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        const root = document.documentElement;
+        root.style.setProperty('--pointer-x', `${event.clientX}px`);
+        root.style.setProperty('--pointer-y', `${event.clientY}px`);
+        document.body.classList.add('has-cursor-glow');
+      });
+    };
+
+    const hideCursorGlow = () => document.body.classList.remove('has-cursor-glow');
+    const handlePointerOut = (event) => {
+      if (event.relatedTarget === null) hideCursorGlow();
+    };
+
+    window.addEventListener('pointermove', handlePointerMove, { passive: true });
+    window.addEventListener('pointerout', handlePointerOut);
+    window.addEventListener('blur', hideCursorGlow);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerout', handlePointerOut);
+      window.removeEventListener('blur', hideCursorGlow);
+      hideCursorGlow();
+      document.documentElement.style.removeProperty('--pointer-x');
+      document.documentElement.style.removeProperty('--pointer-y');
+    };
+  }, []);
+
+  useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(
       (entries) => {
