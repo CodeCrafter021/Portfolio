@@ -1,5 +1,5 @@
 # Saini Amitkumar — Portfolio
-Live Demo: [https.//portfolio-mu-eosin-63.vercel.app/](https://portfolio-mu-eosin-63.vercel.app/)
+Live: [https.//portfolio-mu-eosin-63.vercel.app/](https://portfolio-mu-eosin-63.vercel.app/)
 
 A personal portfolio website showcasing my projects, technical skills, experience, and certificates. Built with React and Vite, it features a responsive layout, light and dark themes, and a contact form that opens your default email application.
 
