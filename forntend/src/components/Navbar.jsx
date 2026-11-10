@@ -61,9 +61,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
           type="button"
         >
-          <span className="theme-thumb" />
-          <span className="theme-icon"><Sun aria-hidden="true" /></span>
-          <span className="theme-icon"><Moon aria-hidden="true" /></span>
+          <span aria-hidden="true" className="theme-star theme-star-one" />
+          <span aria-hidden="true" className="theme-star theme-star-two" />
+          <span aria-hidden="true" className="theme-star theme-star-three" />
+          <span aria-hidden="true" className="theme-thumb">
+            {darkMode ? <Moon /> : <Sun />}
+          </span>
         </button>
         <button
           aria-expanded={isOpen}
