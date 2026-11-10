@@ -1,24 +1,40 @@
 import { BriefcaseBusiness, Code2, Mail, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const emailAddress = 'sainiamitkumar285@gmail.com';
+const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
+  const formRef = useRef();
   const [status, setStatus] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    const mailto = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `From: ${name} (${email})\n\n${message}`,
-    )}`;
+    setStatus('');
 
-    window.location.href = mailto;
-    setStatus('Your email app should open with your message ready to send.');
+    if (!emailJsServiceId || !emailJsTemplateId || !emailJsPublicKey) {
+      setStatus('The contact form is not configured yet. Please email me directly.');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(emailJsServiceId, emailJsTemplateId, formRef.current, {
+        publicKey: emailJsPublicKey,
+      });
+      setStatus('Your message has been sent successfully! I will get back to you soon.');
+      formRef.current.reset();
+    } catch (error) {
+      console.error('EmailJS failed to send the message:', error);
+      setStatus('Failed to send message. Please try again or email me directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -74,7 +90,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-card reveal reveal-delay-2">
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="contact-name">Your name</label>
@@ -107,8 +123,8 @@ const Contact = () => {
                 />
               </div>
               {status && <p aria-live="polite" className="form-status" role="status">{status}</p>}
-              <button className="button-primary form-submit" type="submit">
-                Send Mail <Send aria-hidden="true" />
+              <button className="button-primary form-submit" disabled={loading} type="submit">
+                {loading ? 'Sending...' : 'Send Mail'} <Send aria-hidden="true" />
               </button>
             </form>
           </div>

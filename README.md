@@ -1,7 +1,7 @@
 # Saini Amitkumar — Portfolio
-Live: [https.//portfolio-mu-eosin-63.vercel.app/](https://portfolio-mu-eosin-63.vercel.app/)
+Live: [https://portfolio-mu-eosin-63.vercel.app/](https://portfolio-mu-eosin-63.vercel.app/)
 
-A personal portfolio website showcasing my projects, technical skills, experience, and certificates. Built with React and Vite, it features a responsive layout, light and dark themes, and a contact form that opens your default email application.
+A personal portfolio website showcasing my projects, technical skills, experience, and certificates. Built with React and Vite, it features a responsive layout, light and dark themes, and an EmailJS-powered contact form.
 
 ## About me
 
@@ -13,7 +13,7 @@ I’m a BCA student and aspiring full-stack developer interested in building use
 - Light and dark themes that follow your system preference and remember your selection
 - Project cards linking to live applications
 - Certificate gallery
-- Contact form that prepares an email in your default mail app
+- Contact form powered by EmailJS
 - Accessible navigation and support for reduced motion
 
 ## Featured projects
@@ -49,6 +49,10 @@ npm run dev
 ```
 
 Open the local URL printed by Vite in your terminal.
+
+### Configure the contact form
+
+Copy `forntend/.env.example` to `forntend/.env` and fill in the service ID, template ID, and public key from your EmailJS account. In your EmailJS template, use the form field names `name`, `email`, `subject`, and `message`. Restart the Vite development server after editing `.env`.
 
 ## Available scripts
 
