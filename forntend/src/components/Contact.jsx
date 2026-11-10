@@ -108,7 +108,7 @@ const Contact = () => {
               </div>
               {status && <p aria-live="polite" className="form-status" role="status">{status}</p>}
               <button className="button-primary form-submit" type="submit">
-                Open email app <Send aria-hidden="true" />
+                Send Mail <Send aria-hidden="true" />
               </button>
             </form>
           </div>
